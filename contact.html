@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ani ng Sining - Contact Us</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="viewport">
+    <header>
+      <div class="logo">
+        <img src="img/logo.png" alt="Ani ng Sining Logo">
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="paintings.html">Paintings</a>
+        <a href="sculptures.html">Sculptures</a>
+        <a href="#">Exhibitions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+    </header>
+
+    <main class="contact">
+      <section class="contact-container">
+        <!-- Left: Contact form -->
+        <div class="contact-form">
+          <h1>NEED HELP?</h1>
+          <p>We’re here to assist you.</p>
+
+          <form id="contactForm">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required />
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required />
+
+            <label for="email">E-mail:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              oninvalid="this.setCustomValidity('Please enter a valid email address (must include @).')"
+              oninput="this.setCustomValidity('')"
+            />
+
+            <label for="message">Concern/Questions:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit" class="submit-btn">SUBMIT</button>
+          </form>
+        </div>
+
+        <!-- Right: Contact details -->
+        <div class="contact-info">
+          <h1><span class="phone-icon">📞</span> REACH US ON:</h1>
+
+          <p>Instagram: <strong>@aningsining</strong></p>
+          <p>Facebook: <strong>Ani ng Sining</strong></p>
+          <p>Phone: <strong>(+63) 234 - 5678 - 910</strong></p>
+          <p>E-mail: <strong>aningsining@gmail.com</strong></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Ani ng Sining. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Optional JS: prevent empty submissions for browsers with JS disabled -->
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      if (!this.checkValidity()) {
+        e.preventDefault(); // stops submission
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,551 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+/* Layout Wrapper */
+.viewport {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcebea;
+  padding: 1rem 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px; /* adjust as needed */
+  width: auto;
+}
+
+nav {
+  display: flex;
+  gap: 1.6rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #a66;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 450px; /* Adjust for smaller banner */
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 35%; /* adjust vertical position */
+  right: 8%; /* move to right side */
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: right; /* align text to the right edge */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  max-width: 650px;
+}
+
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.hero-text .subtitle {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+}
+
+/* Caption at bottom-right */
+.hero-credit {
+  position: absolute;
+  bottom: 6%;
+  right: 6%;
+  font-size: 0.9rem;
+  color: #222;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-style: italic;
+}
+
+
+/* Categories Section */
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.category {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.category img:hover {
+  transform: scale(1.03);
+}
+
+.category h3 {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.category p {
+  margin-top: 0.3rem;
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+/* Featured Collections Section */
+.collections {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.collections h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* Grid layout */
+.collections .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Featured Collections Section */
+.collections {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.collections h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* Grid layout */
+.collections .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  justify-items: center;
+}
+
+/* Featured Collections Section */
+.collections {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.collections h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* Grid layout */
+.collections .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  justify-items: center;
+}
+
+/* Image cards */
+.collections .grid a {
+  text-decoration: none;
+  color: #000;
+  width: 300px; /* same width as home images */
+  text-align: left;
+}
+
+.collections .grid img {
+  width: 100%;
+  height: 180px; /* same height as home images */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collections .grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* Painting title + artist */
+.collections .grid p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Painting text styling */
+.collections p {
+  color: #000; /* keep titles black */
+}
+
+.collections p .artist {
+  color: #666; /* make artist name gray */
+  font-style: normal; /* optional: removes italic style if you want */
+}
+
+/* ABOUT PAGE */
+.about {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 2rem;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1100px;
+  width: 100%;
+  gap: 3rem;
+}
+
+/* Left column (text) */
+.about-text {
+  flex: 2;
+  color: #111;
+}
+
+.about-text h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.6rem;
+}
+
+.about-text h2 {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+  color: #333;
+  max-width: 90%;
+}
+
+/* Right column (Baybayin symbols) */
+.about-symbols {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-symbols img {
+  max-width: 140px;
+  height: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-symbols {
+    margin-top: 2rem;
+  }
+
+  .about-text p {
+    max-width: 100%;
+  }
+}
+/* CONTACT PAGE */
+.contact {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  font-family: 'Georgia', serif;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  gap: 5rem;
+}
+
+/* Left column - Form */
+.contact-form {
+  flex: 1;
+}
+
+.contact-form h1 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 0.4rem;
+}
+
+.contact-form p {
+  font-size: 1.05rem;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 1.8rem;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #111;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #fdeeee;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  outline: none;
+  font-family: 'Georgia', serif;
+  transition: box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 0 2px #f6caca;
+}
+
+.contact-form textarea {
+  height: 90px;
+}
+
+.submit-btn {
+  background-color: #fdeeee;
+  color: #111;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #f8dede;
+}
+
+/* Right column - Contact info */
+.contact-info {
+  flex: 0 0 350px;
+  text-align: right; /* align text to the right */
+}
+
+.contact-info h1 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 1.2rem;
+}
+
+.contact-info .phone-icon {
+  font-size: 1.6rem;
+  color: #e0467b;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+.contact-info p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #222;
+  margin: 0.3rem 0;
+}
+
+.contact-info b {
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .submit-btn {
+    align-self: center;
+  }
+}
+
+
+/* Video Section */
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+/* Pink box container */
+.video-box {
+  background-color: #fcebea;
+  width: 70%;
+  max-width: 700px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep the video in correct ratio and centered */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+/* Responsive YouTube iframe */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #fcebea;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: auto;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 1200px) {
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .categories {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hero-text {
+    top: 18%;
+    left: 5%;
+  }
+
+  .categories {
+    flex-wrap: wrap;
+  }
+}

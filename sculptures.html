@@ -4,31 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ani ng Sining - Sculptures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="viewport">
     <header>
-    <div class="logo">
-  <img src="img/logo.png" alt="Ani ng Sining Logo">
-</div>
+  <div class="logo">
+    <img src="img/logo.png" alt="Ani ng Sining Logo">
+  </div>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="paintings.html">Paintings</a>
-        <a href="sculptures.html" class="active">Sculptures</a>
-        <a href="#">Exhibitions</a>
-        <a href="#">About</a>
-        <a href="#">Contact Us</a>
-      </nav>
-    </header>
+  <!-- Checkbox for toggle -->
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+  <label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="paintings.html">Paintings</a>
+    <a href="sculptures.html">Sculptures</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
 
     <main>
       <section class="hero">
         <img src="img/edsa2.jpg" alt="Sculptures Hero" class="hero-img" />
         <div class="hero-text">
-          <h1>Sculptures Archive</h1>
-          <p>Forms that define Filipino identity</p>
+          <h1>Sculptures<br> Archive</h1>
+          <p>Forms carved with Filipino identity</p>
         </div>
       </section>
 
@@ -52,5 +64,25 @@
       <p>© 2025 Ani ng Sining. All rights reserved.</p>
     </footer>
   </div>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.querySelector("header nav");
+  const menuIcon = document.querySelector(".menu-icon");
+
+  // Toggle navigation visibility on click
+  menuIcon.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  // Close the menu when any link is clicked
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  });
+});
+</script>
+
 </body>
 </html>

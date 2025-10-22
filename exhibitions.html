@@ -3,60 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ani ng Sining - Contact Us</title>
+  <title>Ani ng Sining - Exhibitions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="viewport">
     <header>
-      <div class="logo">
-        <img src="img/logo.png" alt="Ani ng Sining Logo">
+  <div class="logo">
+    <img src="img/logo.png" alt="Ani ng Sining Logo">
+  </div>
+
+  <!-- Checkbox for toggle -->
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+  <label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="paintings.html">Paintings</a>
+    <a href="sculptures.html">Sculptures</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <img src="img/exi.jpg" alt="Art Exhibition" class="hero-img">
+      <div class="hero-text">
+        <h1>Art<br>Exhibitions</h1>
+        <p>A stage for culture and imagination</p>
+      </div>
+    </section>
+
+    <!-- LOCATIONS SECTION -->
+    <section class="exhibitions-locations">
+      <h2>LOCATIONS</h2>
+
+      <div class="museum">
+        <img src="img/nmfa.jpg" alt="National Museum of Fine Arts">
+        <div class="museum-info">
+          <h3>NATIONAL MUSEUM OF FINE ARTS</h3>
+          <p>
+            P. Burgos Drive, Rizal Park, Manila<br>
+            inquiry@nationalmuseum.gov.ph<br>
+            (+632) 8298-1100
+          </p>
+        </div>
       </div>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="paintings.html">Paintings</a>
-        <a href="sculptures.html">Sculptures</a>
-        <a href="#">Exhibitions</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="active">Contact Us</a>
-      </nav>
-    </header>
+      <div class="museum reverse">
+        <div class="museum-info">
+          <h3>METROPOLITAN MUSEUM OF MANILA</h3>
+          <p>
+            MK Tan Centre<br>
+            30th Street, Bonifacio Global City
+            <br>(+63) 917 160 9667</br>
+          </p>
+        </div>
+        <img src="img/metro.jpg" alt="Metropolitan Museum of Manila">
+      </div>
 
+      <div class="museum">
+        <img src="img/underg.avif" alt="Art Underground">
+        <div class="museum-info">
+          <h3>ART UNDERGROUND</h3>
+          <p>
+             2/F Mabini180, 180 A. Mabini St.,<br>
+            Brgy. Addition Hills, San Juan City
+            <br>(02) 8723 6147
+          </p>
+        </div>
+      </div>
 
-<!-- HERO SECTION -->
-<section class="exhibitions-hero">
-  <img src="img/exi.jpg" alt="Art Exhibition" class="hero-img">
-  <div class="hero-text">
-    <h1>Art Exhibitions</h1>
-    <p>A stage for culture and imagination</p>
+      <div class="museum reverse">
+        <div class="museum-info">
+          <h3>CASA MANILA MUSEUM</h3>
+          <p>
+            Plaza Sans Luis Complex, General Luna<br>
+            St, Intramuros, Manila, 1002 
+            <br>Metro Manila
+            <br>(+63) 917 160 9667
+          </p>
+        </div>
+        <img src="img/casa.jpg" alt="Casa Manila Museum">
+      </div>
+
+      <div class="museum">
+        <img src="img/ayala.jpg" alt="Ayala Museum">
+        <div class="museum-info">
+          <h3>AYALA MUSEUM</h3>
+          <p>
+           Makati Avenue, corner Dela Rosa<br>
+          Street, Ayala Center, Makati City, 
+          1229 Metro Manila<br>
+          (+63) 17 834 3845
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Ani ng Sining. All Rights Reserved.
+    </footer>
   </div>
-</section>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.querySelector("header nav");
+  const menuIcon = document.querySelector(".menu-icon");
 
-<!-- LOCATIONS SECTION -->
-<section class="exhibitions-locations">
-  <h2>LOCATIONS</h2>
+  // Toggle navigation visibility on click
+  menuIcon.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
 
-  <div class="museum">
-    <img src="img/nmfa.jpg" alt="National Museum of Fine Arts">
-    <div class="museum-info">
-      <h3>NATIONAL MUSEUM OF FINE ARTS</h3>
-      <p>
-        P. Burgos Drive, Rizal Park, Manila<br>
-        inquiry@nationalmuseum.gov.ph<br>
-        (+632) 8298-1100
-      </p>
-    </div>
-  </div>
+  // Close the menu when any link is clicked
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  });
+});
+</script>
 
-  <div class="museum reverse">
-    <div class="museum-info">
-      <h3>METROPOLITAN MUSEUM OF MANILA</h3>
-      <p>
-        MK Tan Centre<br>
-        30th Street, Bonifacio Global City
-      </p>
-    </div>
-    <img src="img/metro.jpg" alt="Metropolitan Museum of Manila">
-  </div>
-</section>
+</body>
+</html>

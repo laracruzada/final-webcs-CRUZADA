@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ani ng Sining - Paintings</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="viewport">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ani ng Sining - Paintings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
     <header>
       <div class="logo">
-  <img src="img/logo.png" alt="Ani ng Sining Logo">
-</div>
+        <img src="img/logo.png" alt="Ani ng Sining Logo" />
+      </div>
+
+      <!-- Checkbox for toggle -->
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+
+      <!-- Label for burger icon -->
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
 
       <nav>
         <a href="index.html">Home</a>
-        <a href="paintings.html" class="active">Paintings</a>
+        <a href="paintings.html">Paintings</a>
         <a href="sculptures.html">Sculptures</a>
-        <a href="#">Exhibitions</a>
-        <a href="#">About</a>
-        <a href="#">Contact Us</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
       </nav>
     </header>
 
@@ -27,65 +43,135 @@
       <section class="hero">
         <img src="img/meal.png" alt="Paintings Hero" class="hero-img" />
         <div class="hero-text">
-          <h1>Paintings Archive</h1>
+          <h1>Paintings <br>Archive</h1>
           <p>Strokes that shaped Filipino artistry</p>
         </div>
       </section>
 
-     <section class="collections">
-  <h2>FEATURED COLLECTIONS</h2>
-  <div class="grid">
-    <a href="https://ricesciencemuseum.wordpress.com/2015/09/03/botong-francisco-a-nation-imagined/" target="_blank">
-      <img src="img/mother.jpg" alt="" />
-      <p><em>Mother Nature’s Bounty Harvest</em> (1955)<br><span class="artist">Victorio Edades</span></p>
-    </a>
+      <section class="collections">
+        <h2>FEATURED PAINTINGS</h2>
+        <div class="grid">
+          <a
+            href="https://ricesciencemuseum.wordpress.com/2015/09/03/botong-francisco-a-nation-imagined/"
+            target="_blank"
+          >
+            <img src="img/mother.jpg" alt="" />
+            <p>
+              <em>Mother Nature’s Bounty Harvest</em> (1955)<br />
+              <span class="artist">Victorio Edades</span>
+            </p>
+          </a>
 
-    <a href="https://epa.culturalcenter.gov.ph/3/82/2222/" target="_blank">
-      <img src="img/madonna.jpg" alt="" />
-      <p><em>Madonna of the Slum</em> (1950)<br><span class="artist">Vicente Manansala</span></p>
-    </a>
+          <a
+            href="https://epa.culturalcenter.gov.ph/3/82/2222/"
+            target="_blank"
+          >
+            <img src="img/madonna.jpg" alt="" />
+            <p>
+              <em>Madonna of the Slum</em> (1950)<br />
+              <span class="artist">Vicente Manansala</span>
+            </p>
+          </a>
 
-    <a href="https://epa.culturalcenter.gov.ph/3/82/2272/" target="_blank">
-      <img src="img/amorsolo.jpg" alt="" />
-      <p><em>Planting Rice</em> (1950)<br><span class="artist">Fernando Amorsolo</span></p>
-    </a>
+          <a
+            href="https://epa.culturalcenter.gov.ph/3/82/2272/"
+            target="_blank"
+          >
+            <img src="img/amorsolo.jpg" alt="" />
+            <p>
+              <em>Planting Rice</em> (1950)<br />
+              <span class="artist">Fernando Amorsolo</span>
+            </p>
+          </a>
 
-    <a href="https://en.wikipedia.org/wiki/The_Parisian_Life_(painting)" target="_blank">
-      <img src="img/parisian.jpg" alt="" />
-      <p><em>The Parisian Life</em> (1892)<br><span class="artist">Juan Luna</span></p>
-    </a>
+          <a
+            href="https://en.wikipedia.org/wiki/The_Parisian_Life_(painting)"
+            target="_blank"
+          >
+            <img src="img/parisian.jpg" alt="" />
+            <p>
+              <em>The Parisian Life</em> (1892)<br />
+              <span class="artist">Juan Luna</span>
+            </p>
+          </a>
 
-    <a href="https://www.mutualart.com/Artwork/Untitled--Sailing-Off-the-Cliffs-of-Etre/E929DA0E58FE8FE5" target="_blank">
-      <img src="img/normandy.jpg" alt="" />
-      <p><em>Sailing off the Cliffs of Normandy</em> (1900)<br><span class="artist">Félix Hidalgo</span></p>
-    </a>
+          <a
+            href="https://www.mutualart.com/Artwork/Untitled--Sailing-Off-the-Cliffs-of-Etre/E929DA0E58FE8FE5"
+            target="_blank"
+          >
+            <img src="img/normandy.jpg" alt="" />
+            <p>
+              <em>Sailing off the Cliffs of Normandy</em> (1900)<br />
+              <span class="artist">Félix Hidalgo</span>
+            </p>
+          </a>
 
-    <a href="https://lifestyle.inquirer.net/375747/granadean-arabesque-by-jose-joya-1958/" target="_blank">
-      <img src="img/grande.jpg" alt="" />
-      <p><em>Guadalajara Landscape</em> (1957)<br><span class="artist">Jose Joya</span></p>
-    </a>
+          <a
+            href="https://lifestyle.inquirer.net/375747/granadean-arabesque-by-jose-joya-1958/"
+            target="_blank"
+          >
+            <img src="img/grande.jpg" alt="" />
+            <p>
+              <em>Guadalajara Landscape</em> (1957)<br />
+              <span class="artist">Jose Joya</span>
+            </p>
+          </a>
 
-    <a href="https://www.artnet.com/artists/pablo-amorsolo/road-by-the-sea-ie7oO49u2axwjIXWVfRM2g2" target="_blank">
-      <img src="img/bythesea.jpg" alt="" />
-      <p><em>Road by the Sea</em> (1941)<br><span class="artist">Félix Hidalgo</span></p>
-    </a>
+          <a
+            href="https://www.artnet.com/artists/pablo-amorsolo/road-by-the-sea-ie7oO49u2axwjIXWVfRM2g2"
+            target="_blank"
+          >
+            <img src="img/bythesea.jpg" alt="" />
+            <p>
+              <em>Road by the Sea</em> (1941)<br />
+              <span class="artist">Félix Hidalgo</span>
+            </p>
+          </a>
 
-    <a href="https://www.artnet.com/artists/cesar-legaspi/" target="_blank">
-      <img src="img/combanderos.jpg" alt="" />
-      <p><em>Combancheros</em> (1959)<br><span class="artist">Cesar Legaspi</span></p>
-    </a>
+          <a href="https://www.artnet.com/artists/cesar-legaspi/" target="_blank">
+            <img src="img/combanderos.jpg" alt="" />
+            <p>
+              <em>Combancheros</em> (1959)<br />
+              <span class="artist">Cesar Legaspi</span>
+            </p>
+          </a>
 
-    <a href="https://www.wikiart.org/en/botong-francisco/the-fiesta-of-angono-1960" target="_blank">
-      <img src="img/pista.jpg" alt="" />
-      <p><em>Pista sa Angono</em> (1962)<br><span class="artist">Carlos Francisco</span></p>
-    </a>
-  </div>
-</section>
-
+          <a
+            href="https://www.wikiart.org/en/botong-francisco/the-fiesta-of-angono-1960"
+            target="_blank"
+          >
+            <img src="img/pista.jpg" alt="" />
+            <p>
+              <em>Pista sa Angono</em> (1962)<br />
+              <span class="artist">Carlos Francisco</span>
+            </p>
+          </a>
+        </div>
+      </section>
+    </main>
 
     <footer>
       <p>© 2025 Ani ng Sining. All rights reserved.</p>
     </footer>
-  </div>
-</body>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.getElementById("menu-toggle");
+  const nav = document.querySelector("header nav");
+  const menuIcon = document.querySelector(".menu-icon");
+
+  // Toggle navigation visibility on click
+  menuIcon.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  // Close the menu when any link is clicked
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  });
+});
+</script>
+
+  </body>
 </html>

@@ -4,74 +4,114 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ani ng Sining - Home</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="viewport">
-    <header>
-      <div class="logo">
-  <img src="img/logo.png" alt="Ani ng Sining Logo">
-</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="paintings.html">Paintings</a>
-        <a href="sculptures.html">Sculptures</a>
-        <a href="exhibitions.html">Exhibitions</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact Us</a>
-      </nav>
-    </header>
 
+  <header>
+  <div class="logo">
+    <img src="img/logo.png" alt="Ani ng Sining Logo">
+  </div>
+
+  <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+  <label for="menu-toggle" class="menu-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="paintings.html">Paintings</a>
+    <a href="sculptures.html">Sculptures</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+
+    <!-- Main -->
     <main class="home">
+      <!-- Hero -->
       <section class="hero">
-  <img src="img/fruit3.jpg" alt="Hero Image" class="hero-img" />
-  <div class="hero-text">
-    <h1>A Tribute To Filipino Artists</h1>
-    <p class="subtitle">A Living Archive of Filipino Artistic Excellence.</p>
-  </div>
-  <p class="hero-credit"><em>‘The Fruit Gatherer’</em>, Fernando Amorsolo (1950)</p>
-</section>
+        <img src="img/proot.png" alt="Art Exhibition" class="hero-img">
+        <div class="hero-text">
+          <h1>A Tribute To <br>Filipino Artists</h1>
+          <p class="subtitle">A Living Archive of Filipino Artistic Excellence</p>
+        </div>
+      </section>
 
+      <div class="hero-credit">
+        'The Fruit Gatherer', Fernando Amorsolo (1950)
+      </div>
+
+      <!-- Categories (hidden on mobile) -->
       <section class="categories">
-  <a href="paintings.html" class="category">
-    <img src="img/amorsolo.jpg" alt="Paintings" />
-    <h3>Paintings</h3>
-    <p>Visual artistry preserved across eras</p>
-  </a>
+        <a href="paintings.html" class="category">
+          <img src="img/amorsolo.jpg" alt="Paintings" />
+          <h3>Paintings</h3>
+          <p>Visual narratives preserved on canvas</p>
+        </a>
 
-  <a href="sculptures.html" class="category">
-    <img src="img/sculptmain.jpg" alt="Sculptures" />
-    <h3>Sculptures</h3>
-    <p>Expressions of culture in refined materials</p>
-  </a>
+        <a href="sculptures.html" class="category">
+          <img src="img/sculptmain.jpg" alt="Sculptures" />
+          <h3>Sculptures</h3>
+          <p>Expressions of culture in three dimensions</p>
+        </a>
 
-  <a href="exhibitions.html" class="category">
-    <img src="img/exhib.jpg" alt="Exhibitions" />
-    <h3>Exhibitions</h3>
-    <p>Curated showcases of artistic heritage</p>
-  </a>
-</section>
+        <a href="exhibitions.html" class="category">
+          <img src="img/Amorsolo-Lego-Exhibit-scaled.jpeg" alt="Exhibitions" />
+          <h3>Exhibitions</h3>
+          <p>Curated showcases of artistic heritage</p>
+        </a>
+      </section>
 
-
-   <section class="video">
-  <div class="video-box">
-    <div class="video-container">
-      <iframe 
-        src="https://www.youtube.com/embed/unRZqH4NQ_8?si=J8n8iY2SuvYydVBA"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</section>
+      <!-- Video Section -->
+       
+      <section class="video">
+        <div class="video-box">
+          <div class="video-container">
+            <iframe 
+              src="https://www.youtube.com/embed/unRZqH4NQ_8?si=J8n8iY2SuvYydVBA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <p>© 2025 Ani ng Sining. All rights reserved.</p>
     </footer>
+
   </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById("menu-toggle");
+    const nav = document.querySelector("header nav");
+
+    menuToggle.addEventListener("change", function() {
+      if (this.checked) {
+        nav.classList.add("show");
+      } else {
+        nav.classList.remove("show");
+      }
+    });
+  });
+</script>
+
 </body>
 </html>

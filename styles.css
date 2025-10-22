@@ -1,9 +1,10 @@
 /* Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Georgia', serif;
+  font-family: 'Cormorant', serif;
 }
 
 /* Layout Wrapper */
@@ -64,20 +65,12 @@ nav a:hover {
 
 .hero-text {
   position: absolute;
-  top: 35%;
-  right: 8%; 
+  top: 50%;
+  left: 5%;           
   transform: translateY(-50%);
-  color: #fff;
-  text-align: right; 
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  max-width: 650px;
-}
-
-
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 1.2;
+  text-align: left;   
+  color: white;
+  max-width: 40%;
 }
 
 .hero-text p {
@@ -86,9 +79,9 @@ nav a:hover {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: bold;
-  line-height: 1.2;
+  line-height: 1;
 }
 
 .hero-text .subtitle {
@@ -98,17 +91,16 @@ nav a:hover {
 
 /* Caption at bottom-right */
 .hero-credit {
-  position: absolute;
-  bottom: 6%;
-  right: 6%;
+  text-align: right;
   font-size: 0.9rem;
-  color: #222;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 4px 8px;
+  color: #555;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 10px;
   border-radius: 4px;
   font-style: italic;
+  margin: 8px 6% 0 auto; 
+  max-width: fit-content;
 }
-
 
 /* Categories Section */
 .categories {
@@ -168,49 +160,10 @@ nav a:hover {
 .collections .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  justify-items: center;
-}
-
-/* Featured Collections Section */
-.collections {
-  text-align: center;
-  padding: 4rem 0 2rem;
-}
-
-.collections h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #222;
-}
-
-/* Grid layout */
-.collections .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 2.2rem;
   justify-items: center;
 }
 
-/* Featured Collections Section */
-.collections {
-  text-align: center;
-  padding: 4rem 0 2rem;
-}
-
-.collections h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #222;
-}
-
-/* Grid layout */
-.collections .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.8rem;
-  justify-items: center;
-}
 
 /* Image cards */
 .collections .grid a {
@@ -269,7 +222,7 @@ nav a:hover {
   gap: 3rem;
 }
 
-/* Left column (text) */
+/* Left column */
 .about-text {
   flex: 2;
   color: #111;
@@ -326,6 +279,22 @@ nav a:hover {
     max-width: 100%;
   }
 }
+
+/* Hide burger checkbox on larger screens */
+@media (min-width: 600px) {
+  .menu-checkbox {
+    display: none !important;
+  }
+}
+/* Remove link color change on click/visit */
+a,
+a:visited,
+a:active,
+a:hover {
+  color: inherit;         
+  text-decoration: none;  
+}
+
 /* CONTACT PAGE */
 .contact {
   background-color: #fff;
@@ -344,7 +313,7 @@ nav a:hover {
   gap: 5rem;
 }
 
-/* Left column - Form */
+/* Form */
 .contact-form {
   flex: 1;
 }
@@ -385,7 +354,7 @@ nav a:hover {
   margin-bottom: 1rem;
   width: 100%;
   outline: none;
-  font-family: 'Georgia', serif;
+  font-family: 'Cormorant', serif;
   transition: box-shadow 0.2s ease;
 }
 
@@ -414,7 +383,7 @@ nav a:hover {
   background-color: #f8dede;
 }
 
-/* Right column - Contact info */
+/* Right column */
 .contact-info {
   flex: 0 0 350px;
   text-align: right; 
@@ -496,7 +465,7 @@ nav a:hover {
   background-color: #000;
 }
 
-/* Responsive YouTube iframe */
+/* Responsive iframe */
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -517,7 +486,7 @@ footer {
   margin-top: auto;
 }
 
-/* Responsive Tweaks */
+/* Responsive tweaks */
 @media (max-width: 1200px) {
   .hero-text h1 {
     font-size: 2.2rem;
@@ -614,35 +583,34 @@ footer {
 /* Image */
 .museum img {
   width: 45%;
-  height: 320px;
+  aspect-ratio: 4 / 3;   
+  height: auto;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: block;
 }
 
 /* Info section */
 .museum-info {
   width: 50%;
-  font-family: 'Plus Jakarta Sans', sans-serif;
   color: #222;
 }
 
 .museum-info h3 {
-  font-size: 1.8rem;
+  font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 .museum-info p {
-  font-size: 1rem;
+  font-size: 2rem;
   line-height: 1.6;
   color: #333;
 }
 
-/* =========================
-   EXHIBITIONS - DESKTOP FIX
-   ========================= */
+/* Exhibition fix for desktop */
 
 @media (min-width: 1025px) {
 
@@ -655,7 +623,7 @@ footer {
   .exhibitions-locations h2 {
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   /* base museum layout */
@@ -757,25 +725,28 @@ footer {
   }
 
   .hero-text {
-    position: absolute;
-    top: 18%;
-    left: 50%;
-    transform: translate(-50%, -18%);
-    text-align: center;
-    color: #fff;
-    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.7);
-    width: 90%;
-  }
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  transform: translateY(-50%);
+  text-align: left;
+  color: #fff;
+  width: 85%;
+  max-width: 500px;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+}
+
 
   .hero-text h1 {
-    font-size: 2.3rem;
-    line-height: 1.1;
-  }
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
 
-  .hero-text p {
-    font-size: 1rem;
-    margin-top: 0.5rem;
-  }
+.hero-text p {
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
 
   .hero-credit {
     right: 4%;
@@ -818,7 +789,7 @@ footer {
     top: 28%;
     transform: translateY(-28%);
     color: #fff;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     text-align: right;
     text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
@@ -838,13 +809,11 @@ footer {
     margin: 0;
   }
 
-  /* Remove white gaps */
   .banner-spacer {
     height: 0;
     background: none;
   }
 
-  /* Collections or Gallery */
   .collections {
     padding: 0;
   }
@@ -866,7 +835,7 @@ footer {
     width: 100%;
     height: 260px;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: 12;
   }
 
   .collections .grid p {
@@ -900,12 +869,14 @@ footer {
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
 }
 
 .about-text h1 {
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-top: 1.5rem;
+  text-align: left;
+  padding: 2;
 }
 
 .about-text h2 {
@@ -913,20 +884,21 @@ footer {
   font-weight: normal;
   font-style: italic;
   margin-bottom: 1.2rem;
+  text-align: left;
 }
 
 .about-text p {
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .about-symbols img {
   display: block;
   margin: 2rem auto;
-  max-width: 200px;
+  max-width: 100px;
 }
-
 
 /* TABLET VIEW - CONTACT PAGE */
 .contact-container {
@@ -945,15 +917,16 @@ footer {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
+  text-align: center;
 }
 
 .contact-info h1 {
-  font-size: 1.4rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
 .contact-info p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.8;
   margin: 0.5rem 0;
 }
@@ -964,7 +937,6 @@ footer {
   padding: 1rem 0;
 }
 
-
   /* Footer */
   footer {
     width: 100%;
@@ -974,4 +946,555 @@ footer {
     background: #FFF2F2;
   }
 }
+
+/*MOBILE VIEW*/
+@media (max-width: 599px) {
+
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fcebea;
+    padding: 1rem 0.8rem;
+  }
+
+  /* Centered logo */
+  .logo {
+    justify-content: center;
+  }
+
+  /* Hide navigation */
+  nav {
+    display: none !important;
+  }
+
+  /* Hero Section */
+  .hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 45%;
+    left: 6%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: left;
+    width: 80%;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+
+  .hero-text .subtitle {
+    font-size: 1rem;
+    margin-top: 0.4rem;
+  }
+
+  .hero-credit {
+    position: relative;
+    text-align: right;
+    font-size: 0.8rem;
+    color: #444;
+    background: rgba(255,255,255,0.9);
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin: 10px 1rem 0 auto;
+    width: fit-content;
+  }
+
+  /* Hide categories*/
+  .categories {
+    display: none !important;
+  }
+
+  /* Video section */
+  .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .video-box {
+    background-color: #fcebea;
+    width: 90%;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .video-container {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+/* MOBILE VIEWPORT — HIDE IMAGE */
+@media (max-width: 600px) {
+  .about-symbols {
+    display: none;
+  }
+}
+
+  /* Footer */
+  footer {
+    background-color: #fcebea;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* MOBILE VIEWPORT — CONTACT */
+@media (max-width: 600px) {
+  /* Hide the contact form */
+  .contact-form {
+    display: none;
+  }
+
+  .reach-us {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .phone-icon {
+    display: none;
+  }
+
+  .reach-us h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .reach-us p,
+  .reach-us a {
+    font-size: 1rem;
+    line-height: 1.8;
+    display: block;
+  }
+}
+
+
+/*MOBILE menU*/
+@media (max-width: 599px) {
+  header {
+    position: relative;
+    padding: 1rem;
+    background-color: #fcebea;
+  }
+
+  /* Hide checkbox */
+  .menu-checkbox {
+    display: none;
+  }
+
+  /* Burger icon */
+  .menu-icon {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .menu-icon span {
+    height: 3px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate burger */
+  .menu-checkbox:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+  .menu-checkbox:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-checkbox:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+
+  /* Hidden nav*/
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fcebea;
+    padding: 1.5rem 0;
+    gap: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .menu-checkbox:checked ~ nav {
+    display: flex;
+  }
+}
+
+@media (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
+  nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+/*MOBILE MENU FIX*/
+@media (max-width: 599px) {
+  header {
+    position: relative;
+    padding: 1rem;
+    background: #fcebea;
+  }
+
+  /* hide checkbox */
+  .menu-checkbox {
+    display: none;
+  }
+
+  /* burger icon */
+  .menu-icon {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 30;
+  }
+
+  .menu-icon span {
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* burger X animation */
+  .menu-checkbox:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+  .menu-checkbox:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-checkbox:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fceaea;
+    padding: 2rem 0;
+    gap: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+
+  .menu-checkbox:checked ~ nav {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
+
+  nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+nav a {
+    color: #3d1e1e; 
+    font-size: 1.3rem; 
+    font-family: "Cormorant", serif; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #b34e4e;
+  }
+
+
+/* MOBILE VIEW — PAINTINGS PAGE */
+@media (max-width: 599px) {
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 6%;
+    color: white;
+    text-align: left;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-text h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
+  /* FEATURED COLLECTIONS */
+  .collections {
+    text-align: center;
+    padding: 2.5rem 1rem;
+  }
+
+  .collections h2 {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #111;
+  }
+
+  .collections .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .collections .grid a {
+    width: 90%;
+    max-width: 380px;
+    text-decoration: none;
+  }
+
+  .collections .grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+
+  .collections .grid img:hover {
+    transform: scale(1.02);
+  }
+
+  .collections .grid p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #111;
+  }
+
+  .collections .artist {
+    color: #666;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+}
+
+/* MOBILE VIEWPORT */
+@media (max-width: 600px) {
+  .collections .grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .collections .grid a {
+    display: block;
+  }
+
+  .collections .grid a img {
+    width: 100%;
+    max-width: 400px; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .collections .grid a p {
+    display: none;
+  }
+}
+
+/* MOBILE VIEWPORT — CONTACT PAGE */
+@media (max-width: 600px) {
+
+  .contact-form {
+    display: none;
+  }
+
+  .phone-icon {
+    display: none;
+  }
+
+  .contact-info {
+    width: 100%;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .contact-info h1 {
+    font-size: 2.7rem;
+    margin-bottom: 30px;
+  }
+
+  .contact-info p {
+    font-family: "Cormorant", serif;
+    font-size: 2rem;
+    margin: 15px 0;
+  }
+
+  .contact-info strong {
+    display: block;
+    font-weight: 600;
+    margin-top: 5px;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* MOBILE VIEWPORT — HIDE EXHIBITION IMAGES */
+@media (max-width: 600px) {
+  .museum img {
+    display: none;
+  }
+/* MOBILE VIEWPORT — EXHIBITIONS PAGE */
+@media (max-width: 600px) {
+
+  .museum img {
+    display: none;
+  }
+
+  .exhibitions-locations {
+    padding: 1.5rem 1rem 3rem;
+    background: #fff;
+  }
+
+  .exhibitions-locations h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .museum {
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+
+  .museum-info {
+    width: 100%;
+    text-align: left;
+  }
+
+  .museum-info h3 {
+    font-family: 'Cormorant', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: #111;
+  }
+
+  .museum-info p {
+    font-family: 'Cormorant', serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #222;
+    margin: 0.3rem 0;
+  }
+
+  /* Add spacing between locations */
+  .museum-info:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  /* Links and contact info */
+  .museum-info a,
+  .museum-info p a {
+    color: #3d1e1e;
+    text-decoration: underline;
+    font-size: 1rem;
+  }
+
+  .museum-info a:hover {
+    color: #b34e4e;
+  }
+}
+
+}
+
 
